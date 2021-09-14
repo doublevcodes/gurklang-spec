@@ -1,4 +1,4 @@
-title: Gurklang Language Reference
+title: Gurklang
 email: doublevcodes@gmail.com
 description: >-
   How to Gurklang right
@@ -6,7 +6,6 @@ baseurl: "/gurklang-spec"
 url: "https://doublevcodes.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 github_user_name: doublevcodes
 
-remote_theme: pmarsceill/just-the-docs
 theme: just-the-docs
 plugins:
   - jekyll-feed
@@ -14,18 +13,24 @@ plugins:
 aux_links:
   "Gurkult": https://gurkult.com
 aux_links_new_tab: true
-
-color_scheme: dark
+search_enabled: false
+color_scheme: light
 
 collections:
-  general:
+  reference:
+    permalink: "/:collection/:path"
+    output: true
+  tutorial:
     permalink: "/:collection/:path"
     output: true
 
 just_the_docs:
   collections:
-    general:
-      name: General
+    reference:
+      name: Language Specification
+    tutorial:
+      name: Tutorial
+    
 
 # Exclude from processing.
 # The following items will not be processed, by default.

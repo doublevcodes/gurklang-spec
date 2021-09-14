@@ -2,14 +2,13 @@
 layout: home
 ---
 # Welcome to the Gurklang Language Specification
-Gurklang is a stack-based, dynamically-typed and functional
-programming language.
+#### Gurklang is a stack-based, dynamically-typed and functional programming language.
 ## Stack-based
 Every operation carried out in Gurklang makes a series of
 changes to the stack. An empty stack is denoted as `()`.
 For this example, the function `peek` returns the value of
 the top-most item of the stack.
-```
+```basic
 >>> peek
 ()
 >>> 1

@@ -4,9 +4,6 @@ layout: home
 # Welcome to the Gurklang Language Specification
 #### Gurklang is a stack-based, dynamically-typed and functional programming language.
 
-<br/>
-[View on GitHub](https://github.com/doublevcodes/gurklang-spec){: .btn .btn-green }
-
 ## Stack-based
 Every operation carried out in Gurklang makes a series of
 changes to the stack. An empty stack is denoted as `()`.
@@ -49,3 +46,5 @@ and [`Haskell`](https://www.haskell.org/). These languages emphasis a few main f
 1. **Higher-order functions** - functions that operate on functions.
 2. **Immutability** - a definition is not a variable, you can't reassign it.
 3. **Strong typing** - don't hide errors, bring them out
+
+[View on GitHub](https://github.com/doublevcodes/gurklang-spec){: .btn .btn-green }

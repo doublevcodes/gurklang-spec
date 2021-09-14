@@ -1,4 +1,4 @@
-title: Gurklang
+title: Gurklang Language Reference
 email: doublevcodes@gmail.com
 description: >-
   How to Gurklang right
@@ -11,10 +11,19 @@ theme: just-the-docs
 plugins:
   - jekyll-feed
 
+compress_html:
+  ignore:
+    envs: all
+
+kramdown:
+  syntax_highlighter_opts:
+    block:
+      line_numbers: true
+
 aux_links:
   "Gurkult": https://gurkult.com
 aux_links_new_tab: true
-search_enabled: false
+
 color_scheme: light
 
 collections:

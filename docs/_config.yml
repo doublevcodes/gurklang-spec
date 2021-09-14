@@ -2,7 +2,7 @@ title: Gurklang
 email: doublevcodes@gmail.com
 description: >-
   How to Gurklang right
-baseurl: "/gurklang-spec"
+baseurl: gurklang-spec
 url: "https://doublevcodes.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 github_user_name: doublevcodes
 

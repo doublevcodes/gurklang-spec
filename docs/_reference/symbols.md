@@ -9,11 +9,8 @@ title: Symbols
 1. TOC
 {:toc}
 
-## Stuff
-more stuff
+## Atoms
 
-## Foo
-lol
-
-## bar
-text
+```py
+atom ::= ":" "!"..."
+```

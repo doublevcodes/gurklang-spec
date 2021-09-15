@@ -21,36 +21,31 @@ implementation produces expected behaviour, it is valid.
 
 ## Notation
 
-The description of lexical analysis and syntax use [BNF Grammar Notation](https://en.wikipedia.org/wiki/Backus%E2%80%93Naur_form)
+The description of lexical analysis and syntax use [EBNF Grammar Notation](https://en.wikipedia.org/wiki/Extended_Backus%E2%80%93Naur_form)
 with slight modifications. Namely the absence of angle brackets: `<` and `>`.
 
 ```py
-foo ::= bar ( bar | "-" )*
-bar ::= "a"..."z"
+foo = bar ( bar | "-" )*
+bar = "a"..."z"
 ```
 
 Line 1 states that a `foo` is equivalent to a `bar` followed by 0 or more `bar`s or underscores.
 Following on from this, Line 2 states that a `bar` is any letter in the range starting at `a` (ASCII: 97) ending at `z` (ASCII: 122)
-present in the [Latin Alphabet](https://en.wikipedia.org/wiki/Latin_alphabet).
+present in the [Unicode](https://home.unicode.org/).
 
-A brief summary of BNF Grammar is as follows.
+### A table of reference for EBNF grammar
 
-1. A rule begins with a name which is defined in turn by that rule.
-2. The name the rules defined is followed by `::=`.
-3. A pipe/bar (`|`) is used to separate alternatives. It is the least binding operator in this notation.
-4. A star/asterisk (`*`) represents 0 or more repetitions of the preceding item.
-5. A plus (`+`) represents 1 or more repetitions of the preceding item.
-6. An item enclosed in square brackets (`[...]`) means the item is optional.
-7. The `*` and `+` operators bind as tightly as possible.
-8. A pair of parentheses (`(...)`) is used for grouping
-9. All string literals are enclosed in double quotes (`"..."`)
-10. Rules or normally contained on single lines. Rules with many alternatives may be spread over multiple lines
-with each line beginning with a pipe/bar (`|`). An example follows.
-```py
-foo ::= bar ( spam | "_" )*
-        | spam ( bar | "_" )*
-bar ::= "a"..."z"
-spam ::= "@"
-```
-11. A phrase between a pair of angle brackets (`<` and `>`) will be assumed to provide context and information only;
-it does not affect the grammar in any way.
+| Usage         | Notation          |
+|:--------------|:------------------|
+| Definition    | `=`               |
+| Concatenation | `,`               |
+| Termination   | `;`               |
+| Alternation   | `|`               |
+| Optional      | `[ ... ]`         |
+| Repetition 	| `{ ... }`         |         
+| Grouping      | `( ... )`         |
+| String        | `" ... "`         |
+| String    	| `' ... '`         |
+| Comment    	| `(* ... *)`       |
+| Special       | `? ... ?`         |
+| Exception 	| `-`               |
